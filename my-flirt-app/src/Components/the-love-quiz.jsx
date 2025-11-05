@@ -7,8 +7,8 @@ function Lovequiz() {
     {
       id: 1,
       question: "What's something I cant go a day without?",
-      Options: ["Music🎼🎵🎧", "Food🍚", "You🧑🏽", "Sleep😴"],
-      answer: "You🧑🏽",
+      Options: ["Music🎼🎵🎧", "Food🍚", "You 👸", "Sleep😴"],
+      answer: "You👸",
     },
     {
       id: 2,
@@ -69,14 +69,9 @@ function Lovequiz() {
     },
     {
       id: 9,
-      question: "What's something I always say?",
-      Options: [
-        "I'm okay 😂",
-        "God's got us 🙏",
-        "I miss you 😔",
-        "I love you 😘",
-      ],
-      answer: "I love you 😘",
+      question: "Where did we plan to spend our vacation a few years from now?",
+      Options: ["Paris 🇫🇷", "New York 🗽", "Dubai 🏙", "Tokyo 🗼"],
+      answer: "Dubai 🏙",
     },
     {
       id: 10,
