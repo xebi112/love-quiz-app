@@ -1,4 +1,6 @@
+import { use } from "react";
 import Rejected from "./rejected";
+
 import { useState } from "react";
 
 function Popup({ setPop }) {

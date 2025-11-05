@@ -1,7 +1,9 @@
 function Rejected({ show }) {
   return (
     <div className="rejected-container">
-      <p>GO back en click the ryt btn 😡</p>
+     
+      <p>Jxt giv it a try 😔</p>
+      <p>df</p>
       <button
         className="goback"
         onClick={() => {
@@ -10,6 +12,7 @@ function Rejected({ show }) {
       >
         Okay Fine 🙄
       </button>
+
     </div>
   );
 }

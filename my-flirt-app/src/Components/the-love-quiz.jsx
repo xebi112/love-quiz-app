@@ -1,15 +1,25 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Popup from "./love-quiz-pop-up";
 import Loveresult from "./Love-Result";
+import Loader from "./reloader";
 
 function Lovequiz() {
   const loveQuestions = [
+    
     {
       id: 1,
       question: "What's something I cant go a day without?",
       Options: ["Music🎼🎵🎧", "Food🍚", "You 👸", "Sleep😴"],
       answer: "You👸",
     },
+
+     {
+      id: 2,
+      question: "What kind of a man am I to you?",
+      Options: ["Sweet but stubborn😂","Loving and caring 💖","calm but full of vibes 😎","Your Biggest Wahala 🤣"],
+      answer: "Loving and caring 💖",
+    },
+    
     {
       id: 2,
       question: "Which one best describes me?",
@@ -41,9 +51,9 @@ function Lovequiz() {
     },
     {
       id: 6,
-      question: "If i could choose one thing forever,wht would it be?",
-      Options: ["Success 🏆", "Peace 🕊", "Money 💸", "You 💖"],
-      answer: "You 💖",
+      question: "When we arue who apologizes first?",
+      Options: ["You 😉","Me 😎","We both act stubborn 😅","No one-we both just start talking again 😂"],
+      answer: "Me 😎",
     },
     {
       id: 7,
@@ -57,15 +67,10 @@ function Lovequiz() {
       answer: "All the above 😎",
     },
     {
-      id: 8,
-      question: "What's something I'd never do to you?",
-      Options: [
-        "Ignore you on purpose 🚫",
-        "Stop loving you 💔",
-        "Lie to you 🙅‍♂️",
-        "All the above 🧡",
-      ],
-      answer: "All the above 🧡",
+          id: 8,
+      question: "What's something you love most about us?",
+      Options: ["The late night talks 🌙","Our random jokes 😂","How we never stay mad 💞","Everything 😍"],
+      answer: "Everything 😍",
     },
     {
       id: 9,
@@ -74,16 +79,12 @@ function Lovequiz() {
       answer: "Dubai 🏙",
     },
     {
-      id: 10,
-      question: "What's something I always pray for",
-      Options: [
-        "Success for Both of us 🙏",
-        "Money 💸",
-        "Fame 🌍",
-        "A new phone 📱",
-      ],
-      answer: "Success for Both of us 🙏",
+      id:10,
+      question:"If i say im outside your house,whats your first reaction?",
+      Options:["Run out immediately 🏃‍♀️","Think I'm joking  😆","Fix your hair first 😂","Freeze in shock😲"],
+      answer:"Run out immediately 🏃‍♀️",
     },
+    
   ];
 
   const [currentAns, setCurrentAns] = useState(0);
@@ -92,6 +93,15 @@ function Lovequiz() {
     Array(loveQuestions.length).fill(null)
   );
   const [finish, setfinish] = useState(false);
+  const [showloader, setShowloader] = useState(true);
+  useEffect(() => {
+    if (!showpop) {
+      const timer = setTimeout(() => {
+        setShowloader(false);
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [showpop]);
 
   if (showpop) {
     return <Popup setPop={setshowpop} />;
@@ -118,6 +128,10 @@ function Lovequiz() {
   });
 
   const fillpercent = (score / loveQuestions.length) * 100;
+
+  if (showloader) {
+    return <Loader />;
+  }
 
   if (finish) {
     return <Loveresult scores={fillpercent} retry={retry} />;

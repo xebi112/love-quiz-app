@@ -1,5 +1,9 @@
 body{
   font-family: "Dancing Script", cursive;
+  display:flex;
+   background: #ff69b4;
+  justify-content: center;
+  align-items: center;
   
 }
 .Lovequiz-container {
@@ -105,19 +109,9 @@ body{
   margin-top: 20px;
 }
 .rejected-container{
-   background: linear-gradient(120deg, #ffb6c1, #ff69b4);
-   font-size: 2rem;
-   font-family: "Dancing Script", cursive;
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-  border-radius: 20px;
-  box-shadow: 0 0 25px rgba(255, 105, 180, 0.4);
-  width: 90%;
-  max-width: 350px;
-  margin: 80px auto;
-  font-family: "Poppins", sans-serif;
-  animation: popIn 0.6s ease-in-out;
+  background:linear-gradient( #ff1493,  #ffb6c1);
+  border-radius: 12px;
+  padding:50px;
 }
 .popup-ans .yes, .popup-ans .no {
   background: white;
@@ -147,25 +141,6 @@ body{
   100% { transform: scale(1); opacity: 1; }
 }
 
-
-
-.Rejected-container {
-  background: #ff4d6d;
-  color: white;
-  padding: 30px;
-  border-radius: 20px;
-  text-align: center;
-  width: 80%;
-  max-width: 320px;
-  margin: 100px auto;
-  font-family: "Poppins", sans-serif;
-  box-shadow: 0 0 20px rgba(255, 77, 109, 0.4);
-  animation: shake 0.6s ease-in-out;
-}
-
-.Rejected-container p {
-  font-size: 1.2rem;
-}
 
 @keyframes shake {
   0%, 100% { transform: translateX(0); }
@@ -237,4 +212,65 @@ body{
 .retry-btn:hover {
   transform: scale(1.05);
   background: #ff4d70;
+}
+
+.loader-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ font-family: "Dancing Script", cursive;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.heart-loader {
+  font-size: 4rem;
+  animation: pulse 1.5s infinite;
+  text-shadow: 0 0 20px rgba(255, 105, 180, 0.6);
+}
+
+.loader-text {
+  margin-top: 20px;
+  font-size: 1.4rem;
+  color: #d63384;
+  font-weight: bold;
+  letter-spacing: 2px;
+  animation: blink 2s infinite;
+}
+
+/* --- Animations --- */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+  }
+  50% {
+    transform: scale(1.2);
+    text-shadow: 0 0 25px rgba(255, 20, 147, 0.8);
+  }
+  100% {
+    transform: scale(1);
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+  }
+}
+
+@keyframes blink {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
