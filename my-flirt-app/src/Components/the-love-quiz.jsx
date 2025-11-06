@@ -5,87 +5,83 @@ import Loader from "./reloader";
 
 function Lovequiz() {
   const loveQuestions = [
+   
     
-    {
-      id: 1,
-      question: "What's something I cant go a day without?",
-      Options: ["Music🎼🎵🎧", "Food🍚", "You 👸", "Sleep😴"],
-      answer: "You👸",
-    },
+  {
+    id: 1,
+    question: "What's your favorite way we spend time together remotely?",
+    option: ["Video Calls 🥰", "Texting all day 🤩 ", "Watching movies together 😊", "Voice calls 📞"],
+    answer: "Voice calls 📞" ,
+  },
+  {
+    id: 2,
+    question: "Which type of message from me makes you smile?",
+    option: ["Good Morning texts ✉", "calling you cute names 😄", "Funny videos 🎬", "Nothing 🎇"],
+    answer: "Good Morning texts ✉",
+  },
+  {
+    id: 3,
+    question: "Which small gesture from me makes you feel loved?",
+    option: ["Good morning messages ☀", "Surprise emojis 😘", "Cute voice notes 🎤", "Sharing songs 🎶"],
+    answer: "Cute voice notes 🎤",
+  },
+  {
+    id: 4,
+    question: "If we could teleport for a weekend, what would you want to do?",
+    option: ["Beach day 🏖", "Picnic in the park 🍉", "Explore a city 🏙", "Stay cozy at home 🛋"],
+    answer: "Picnic in the park 🍉",
+  },
+  {
+    id: 5,
+    question: "Do you feel loved even from afar?",
+    option: ["Yes💖", "Always 🥰", "Nah 😏", "Sometimes 🙄"],
+    answer: "Always 🥰",
+  },
+  {
+    id: 6,
+    question: "If I stopped talking  for a day ,what wolud you do ?",
+    option: ["Text you imidiately 😥", "Wouldn't really notice you went 😪", "Miss you buh stay quiet 😶", "Wait a while to see if ill text 🗯"],
+    answer: "Text you imidiately 😥",
+  },
+  {
+    id: 7,
+    question: "Do I make you happy for real?",
+    option: ["Yes very Happy 😍", "Hmm yh 😒", "Sometimes 🙂", "Yh Buh i hide it 😋"],
+    answer: "Yes very Happy 😍",
+  },
+  {
+    id: 8,
+    question: "When you think about me, what feeling comes first?",
+    option: ["Peace💖", "Doubt 😔", "Confusion 😟", "Anger 🤬"],
+    answer: "Peace💖",
+  },
+  {
+    id: 9,
+    question: "If someone tried to get close to me,what would you do?",
+    option: ["Get Jealous 🤗", "Stay calm buh watch 👀", "Dont really care 🥱", "Question whuever it is 🎭 "],
+    answer: "Dont really care 🥱",
+  },
+  {
+    id: 10,
+    question: "What’s your favorite memory of us so far?",
+    option: ["Late-night talks 🌙", "Funny video call moments 😂", "Sending each other memes 📱", "Planning our future trips 🌍"],
+    answer: "Funny video call moments 😂",
+  },
+  {
+    id:11,
+    question:"If i ever walked away,would you feel regret?",
+    option:["A little 😏","Yes a lot 😥","Dont think so 🤨","Maybe 😑"],
+    answer:"Yes a lot 😥",
+  },
 
-     {
-      id: 2,
-      question: "What kind of a man am I to you?",
-      Options: ["Sweet but stubborn😂","Loving and caring 💖","calm but full of vibes 😎","Your Biggest Wahala 🤣"],
-      answer: "Loving and caring 💖",
-    },
-    
-    {
-      id: 2,
-      question: "Which one best describes me?",
-      Options: ["Funny😂", "Serious😐", "Romantic💘", "All of the above 😏"],
-      answer: "All of the above 😏",
-    },
-    {
-      id: 3,
-      question: "What pet do i love the most",
-      Options: ["Dogs 🐩", "Cats 😾", "Birds 🦜", "None 😅"],
-      answer: "Dogs 🐩",
-    },
-    {
-      id: 4,
-      question: "Whats's my love language?",
-      Options: [
-        "Words of affirmation 💬",
-        "Quality Time 🕗",
-        "Physical Touch 🤝",
-        "Gifts 🎁",
-      ],
-      answer: "Words of affirmation 💬",
-    },
-    {
-      id: 5,
-      question: "What's my favorite thing to call you?",
-      Options: ["Babe 💞", "Love 🧡", "My World 🌍", "Princess 👑"],
-      answer: "Babe 💞",
-    },
-    {
-      id: 6,
-      question: "When we arue who apologizes first?",
-      Options: ["You 😉","Me 😎","We both act stubborn 😅","No one-we both just start talking again 😂"],
-      answer: "Me 😎",
-    },
-    {
-      id: 7,
-      question: "Which one im i better at?",
-      Options: [
-        "Making you laugh 😂",
-        "Giving advice 💭",
-        "Listening 👂",
-        "All the above 😎",
-      ],
-      answer: "All the above 😎",
-    },
-    {
-          id: 8,
-      question: "What's something you love most about us?",
-      Options: ["The late night talks 🌙","Our random jokes 😂","How we never stay mad 💞","Everything 😍"],
-      answer: "Everything 😍",
-    },
-    {
-      id: 9,
-      question: "Where did we plan to spend our vacation a few years from now?",
-      Options: ["Paris 🇫🇷", "New York 🗽", "Dubai 🏙", "Tokyo 🗼"],
-      answer: "Dubai 🏙",
-    },
-    {
-      id:10,
-      question:"If i say im outside your house,whats your first reaction?",
-      Options:["Run out immediately 🏃‍♀️","Think I'm joking  😆","Fix your hair first 😂","Freeze in shock😲"],
-      answer:"Run out immediately 🏃‍♀️",
-    },
-    
-  ];
+  {
+    id:11,
+    question:"What do you think is my biggest weakness in love?",
+    option:["You care too much 😒","You over think things 😟","You fear losing people 💔","You love deeply 💖"],
+    answer:"You over think things 😟",
+  },
+];
+     
 
   const [currentAns, setCurrentAns] = useState(0);
   const [showpop, setshowpop] = useState(true);
@@ -128,19 +124,22 @@ function Lovequiz() {
   });
 
   const fillpercent = (score / loveQuestions.length) * 100;
+  let rounded=Math.round(fillpercent)
+  console.log(rounded)
 
   if (showloader) {
     return <Loader />;
   }
 
   if (finish) {
-    return <Loveresult scores={fillpercent} retry={retry} />;
+    return <Loveresult scores={rounded} retry={retry} />;
   }
   function retry() {
     setshowpop(true);
     setfinish(false);
     setselectedans(Array(loveQuestions.length).fill(null));
     setCurrentAns(0);
+    setShowloader(true)
   }
 
   return (
@@ -168,7 +167,7 @@ function Lovequiz() {
       <h4>{loveQuestions[currentAns].question}</h4>
 
       <div className="options">
-        {loveQuestions[currentAns].Options.map((o, index) => (
+        {loveQuestions[currentAns].option.map((o, index) => (
           <p
             key={index}
             onClick={() => handleselect(o)}
@@ -177,6 +176,9 @@ function Lovequiz() {
                 selectedans[currentAns] === o
                   ? "pink"
                   : " rgba(255, 255, 255, 0.2)",
+                  pointerEvents:selectedans[currentAns] !==null ? "none": "auto",
+                  opacity:selectedans[currentAns] !==null ? 0.6 : 1,
+                  cursor:selectedans[currentAns] !==null ? "not-allowed" : "pointer",
             }}
           >
             {o}
