@@ -176,9 +176,7 @@ function Lovequiz() {
                 selectedans[currentAns] === o
                   ? "pink"
                   : " rgba(255, 255, 255, 0.2)",
-                  pointerEvents:selectedans[currentAns] !==null ? "none": "auto",
-                  opacity:selectedans[currentAns] !==null ? 0.6 : 1,
-                  cursor:selectedans[currentAns] !==null ? "not-allowed" : "pointer",
+                 
             }}
           >
             {o}
